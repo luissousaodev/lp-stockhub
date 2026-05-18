@@ -434,7 +434,7 @@ main,
 .extension-panel {
   display: grid;
   grid-template-columns: 154px minmax(0, 1fr);
-  width: 100%;
+  width: min(100%, 720px);
   max-width: 720px;
   height: 500px;
   background: #070a10;
@@ -1465,6 +1465,34 @@ main,
    Animations
    ========================================================================== */
 
+[data-reveal] {
+  --reveal-delay: 0ms;
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(6px);
+  transition:
+    opacity 650ms ease,
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 650ms ease;
+  transition-delay: var(--reveal-delay);
+  will-change: opacity, transform, filter;
+}
+
+[data-reveal].is-visible {
+  opacity: var(--reveal-opacity, 1);
+  transform: none;
+  filter: none;
+  will-change: auto;
+}
+
+.pricing-card {
+  --reveal-opacity: 0.65;
+}
+
+.pricing-card--featured {
+  --reveal-opacity: 1;
+}
+
 @keyframes rotate-cw {
   to {
     transform: rotate(360deg);
@@ -1488,26 +1516,80 @@ main,
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: var(--reveal-opacity, 1);
+    transform: none;
+    filter: none;
+  }
+}
+
 /* ==========================================================================
    Responsiveness
    ========================================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
+  .hero {
+    max-width: 860px;
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
+    gap: 40px;
     min-height: auto;
   }
 
   .hero__content {
     max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .hero__title {
     max-width: 680px;
   }
 
+  .hero__copy {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero__pills,
+  .hero__actions,
+  .hero__trust {
+    justify-content: center;
+  }
+
   .hero__visual {
     justify-content: center;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .panel-tilt {
+    width: 100%;
+  }
+
+  .extension-panel {
+    height: 480px;
+  }
+
+  .floating-card--left {
+    left: 8px;
+  }
+
+  .floating-card--right {
+    right: 8px;
   }
 
   .pricing-grid {
@@ -1566,11 +1648,11 @@ main,
 
   .floating-card--left {
     top: 14px;
-    left: -6px;
+    left: 0;
   }
 
   .floating-card--right {
-    right: -6px;
+    right: 0;
     bottom: 14px;
   }
 
