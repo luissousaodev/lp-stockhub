@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="StockHub deixa seus SFX, músicas, B-rolls e imagens dentro do Adobe Premiere Pro. Arrasta, solta — e o arquivo é copiado pra pasta do projeto." />
+  <title>StockHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <span class="pill"><span class="dot"></span> EXTENSÃO PARA ADOBE PREMIERE PRO</span>
+          <h1 class="display hero__title"> 
+            Júnior ou sênior, todo editor perde tempo<span class="gradient-text accent-word">procurando arquivo no PC.</span>
+          </h1>
+          <p class="hero__copy">O Premiere não lê suas pastas. O StockHub organiza seus vídeos, B-rolls e assets dentro do painel, com preview e drag & drop direto pra timeline.</p>
+          <div class="inline-list hero__pills">
+            <span class="pill"><span class="dot"></span> Windows / macOS</span>
+            <span class="pill"><span class="dot"></span> Pagamento único</span>
+            <span class="pill"><span class="dot"></span> Funciona offline</span>
+          </div>
+          <div class="inline-list hero__actions">
+            <a class="button button--primary" href="#preco">Adquira Agora → </a>
+            <a class="button button--ghost" href="#funcionalidades">▶ Ver Demo</a>
+          </div>
+          <div class="inline-list hero__trust">
+            <span class="mono text-muted text-small">Pagamento único</span>
+            <span class="mono text-muted text-small">Funciona offline</span>
+            <span class="mono text-muted text-small">Garantia de 7 dias</span>
+          </div>
+        </div>
+
+        <div class="hero__visual" id="demo">
+          <div class="aurora"></div>
+          <div class="rotating-glow"></div>
+          <div class="panel-tilt floating floating--panel">
+            <article class="premiere-panel extension-panel">
+              <aside class="extension-sidebar">
+                <div class="extension-brand"><span class="extension-brand__icon">SH</span><span>StockHUB</span></div>
+                <nav class="extension-nav">
+                  <span class="extension-nav__label">Início</span>
+                  <span class="extension-nav__item">Favoritos</span>
+                  <span class="extension-nav__item is-active">Todos os arquivos</span>
+                </nav>
+                <div class="extension-categories">
+                  <div class="extension-categories__head"><span>Pastas</span><span>+</span></div>
+                  <div class="extension-folder is-open">
+                    <span class="extension-folder__main">Vídeos <strong>128</strong></span>
+                    <span class="extension-folder__sub">B-roll</span>
+                    <span class="extension-folder__sub">Reels</span>
+                    <span class="extension-folder__sub">Cortes</span>
+                  </div>
+                  <div class="extension-folder">
+                    <span class="extension-folder__main">Imagens <strong>42</strong></span>
+                    <span class="extension-folder__sub">Thumbs</span>
+                    <span class="extension-folder__sub">Overlays</span>
+                  </div>
+                  <div class="extension-folder">
+                    <span class="extension-folder__main">Áudios <strong>86</strong></span>
+                    <span class="extension-folder__sub">SFX</span>
+                    <span class="extension-folder__sub">Músicas</span>
+                  </div>
+                  <div class="extension-folder">
+                    <span class="extension-folder__main">Projetos <strong>24</strong></span>
+                  </div>
+                </div>
+                <div class="extension-sidebar__footer">
+                  <span>Atualizar biblioteca</span>
+                  <span>Configurações</span>
+                  <small><span class="status-dot"></span>Pronto · 418 arquivos</small>
+                </div>
+              </aside>
+
+              <div class="extension-main">
+                <div class="extension-toolbar">
+                  <span class="extension-back">&lsaquo;</span>
+                  <span class="extension-home">Home</span>
+                  <span class="extension-search">⌕ Buscar arquivo...</span>
+                  <span class="extension-filter">Todos</span>
+                </div>
+                <div class="extension-grid">
+                  <article class="extension-asset extension-asset--portrait extension-asset--person">
+                    <div class="extension-thumb"><span>talking head</span></div>
+                    <strong>video-apresentacao.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1920 | 1:24</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--white">
+                    <div class="extension-thumb"><span>roteiro</span></div>
+                    <strong>story-card-01.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1350 | 0:09</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--chart">
+                    <div class="extension-thumb"><span>gráfico</span></div>
+                    <strong>broll-dashboard.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1920 | 0:08</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--money">
+                    <div class="extension-thumb"><span>texto</span></div>
+                    <strong>headline-animada.mov</strong>
+                    <span class="extension-meta">MOV | 1080x1350 | 0:12</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--words">
+                    <div class="extension-thumb"><span>legenda</span></div>
+                    <strong>subtitle-pack.mov</strong>
+                    <span class="extension-meta">MOV | 1080x1350 | 0:10</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--pricing">
+                    <div class="extension-thumb"><span>oferta</span></div>
+                    <strong>price-card.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1350 | 0:09</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--loading">
+                    <div class="extension-thumb"><span>loader</span></div>
+                    <strong>loading-screen.mov</strong>
+                    <span class="extension-meta">MOV | 1080x1350 | 0:08</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--broll">
+                    <div class="extension-thumb"><span>B-roll</span></div>
+                    <strong>textura-cinematic.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1920 | 0:17</span>
+                  </article>
+                  <article class="extension-asset extension-asset--portrait extension-asset--black">
+                    <div class="extension-thumb"><span>transição</span></div>
+                    <strong>fade-transition.mp4</strong>
+                    <span class="extension-meta">MP4 | 1080x1350 | 0:11</span>
+                  </article>
+                </div>
+                <div class="extension-bottom-bar"><span>Grid</span><span class="extension-slider"><i></i></span><span>Zoom</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="floating-card floating-card--left card floating">
+            <span class="floating-card__icon floating-card__icon--brand">♪</span>
+            <div>
+              <strong>boom-deep.wav</strong>
+              <div class="mono text-soft text-small">SFX · 0:01 · adicionado</div>
+            </div>
+          </div>
+          <div class="floating-card floating-card--right card floating">
+            <span class="floating-card__icon floating-card__icon--success">✓</span>
+            <div>
+              <strong>copiado pra pasta do projeto</strong>
+              <div class="mono text-soft text-small">sem media offline</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section section-surface section-surface--light" id="problema">
+      <div class="section-heading">
+        <h2 class="display">Quanto tempo você perde<br><span class="gradient-text">procurando o asset certo?</span></h2>
+      </div>
+      <div class="grid grid--2 section-grid">
+        <article class="glass problem-card">
+          <div class="eyebrow">Hoje · sem StockHub</div>
+          <div class="display card-title">30+ min por vídeo<br>só procurando.</div>
+          <ul class="clean-list clean-list--muted">
+            <li><span class="list-icon list-icon--bad">×</span>Alt-tab entre Finder, navegador e pasta de assets.</li>
+            <li><span class="list-icon list-icon--bad">×</span>Importa, escuta, descarta, repete.</li>
+            <li><span class="list-icon list-icon--bad">×</span>Importa de novo o mesmo asset porque esqueceu onde tinha posto.</li>
+            <li><span class="list-icon list-icon--bad">×</span>Troca de HD e o projeto fica "media offline".</li>
+          </ul>
+          <div class="section-symbol">⌛</div>
+        </article>
+        <article class="glass problem-card problem-card--featured">
+          <div class="rotating-glow rotating-glow--card"></div>
+          <div class="eyebrow text-accent">com StockHub</div>
+          <div class="display card-title">2 minutos.<br><span class="gradient-text">Direto na timeline.</span></div>
+          <ul class="clean-list">
+            <li><span class="list-icon list-icon--good">✓</span>Tudo dentro do Premiere, em um painel só.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Preview ao passar o mouse, antes de soltar.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Lê as suas pastas do jeito que estão.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Drag & drop com cópia automática pra pasta do projeto.</li>
+          </ul>
+          <div class="section-symbol">⚡</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="funcionalidades">
+      <div class="section-heading">
+        <span class="eyebrow">funcionalidades</span>
+        <h2 class="display">Tudo o que você precisa,<br><span class="gradient-text">nada que você não precisa.</span></h2>
+      </div>
+
+      <article class="feature-stripe">
+        <div class="feature-stripe__media">
+          <div class="feature-demo feature-demo--asset">
+            <video class="feature-demo__video" src="Assets/Arrasta%20e%20solta.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de drag and drop no StockHub"></video>
+          </div>
+        </div>
+        <div class="feature-stripe__copy">
+          <span class="pill"><span class="dot"></span> DRAG & DROP</span>
+          <h3 class="display">Arrasta, solta — <span class="gradient-text">e nunca mais perde o arquivo.</span></h3>
+          <p class="text-block">Selecione qualquer asset do painel e jogue direto na timeline. O StockHub copia o arquivo pra pasta do seu projeto automaticamente — nunca mais "media offline" quando você trocar de HD.</p>
+          <ul class="clean-list">
+            <li><span class="list-icon">✓</span>Áudio, vídeo e imagens.</li>
+            <li><span class="list-icon">✓</span>Cópia automática pra pasta do projeto.</li>
+            <li><span class="list-icon">✓</span>Reconhece o ponto do playhead.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="feature-stripe">
+        <div class="feature-stripe__copy">
+          <span class="pill"><span class="dot"></span> ORGANIZAÇÃO</span>
+          <h3 class="display">Lê suas pastas <span class="gradient-text">do jeito que estão.</span></h3>
+          <p class="text-block">Aponta a pasta dos seus assets e o StockHub indexa sem mover nada. Sua organização atual continua igual — só fica acessível dentro do Premiere.</p>
+          <ul class="clean-list">
+            <li><span class="list-icon">✓</span>Sem reorganização manual.</li>
+            <li><span class="list-icon">✓</span>Funciona com HD externo.</li>
+            <li><span class="list-icon">✓</span>Busca por nome.</li>
+          </ul>
+        </div>
+        <div class="feature-stripe__media">
+          <div class="feature-demo feature-demo--asset">
+            <video class="feature-demo__video" src="Assets/cateegorias.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de organização de assets no StockHub"></video>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-stripe">
+        <div class="feature-stripe__media">
+          <div class="feature-demo feature-demo--asset">
+            <video class="feature-demo__video" src="Assets/Preview.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de preview no StockHub"></video>
+          </div>
+        </div>
+        <div class="feature-stripe__copy">
+          <span class="pill"><span class="dot"></span> PREVIEW</span>
+          <h3 class="display">Veja antes de <span class="gradient-text">soltar.</span></h3>
+          <p class="text-block">Passe o mouse e o preview roda no painel. Ouça o SFX, veja o B-roll em loop e decida antes de jogar na timeline.</p>
+          <ul class="clean-list">
+            <li><span class="list-icon">✓</span>Preview de áudio com waveform.</li>
+            <li><span class="list-icon">✓</span>Preview de vídeo em loop.</li>
+            <li><span class="list-icon">✓</span>Preview de imagens em tela cheia.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="como">
+      <div class="section-heading">
+        <span class="eyebrow">como funciona</span>
+        <h2 class="display">Pronto em <span class="gradient-text">3 minutos.</span></h2>
+      </div>
+      <div class="grid grid--3 section-grid">
+        <article class="glass step-card"><div class="display gradient-text step-card__number">01</div><h3>Instale</h3><p>Baixe o instalador (.zxp). Clique duas vezes. O Premiere reconhece o painel automaticamente.</p></article>
+        <article class="glass step-card"><div class="display gradient-text step-card__number">02</div><h3>Aponte suas pastas</h3><p>Arraste a pasta de assets para o StockHub. Ele lê e indexa sem mexer nos seus arquivos.</p></article>
+        <article class="glass step-card"><div class="display gradient-text step-card__number">03</div><h3>Edite mais rápido</h3><p>Abra qualquer projeto: o painel está lá, do lado da timeline. Pronto.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="preco">
+      <div class="section-heading">
+        <span class="eyebrow">preço</span>
+        <h2 class="display">Uma vez. <span class="gradient-text">Para sempre.</span></h2>
+        <p>Sem mensalidade, sem upgrade pago, sem letra miúda. Atualizações inclusas.</p>
+      </div>
+      <div class="pricing-grid section-grid">
+        <article class="glass pricing-card">
+          <div class="eyebrow">comprando packs avulsos</div>
+          <div class="display pricing-card__muted-price">R$50-200</div>
+          <div class="mono text-soft">cada · e ainda sem organização</div>
+        </article>
+        <article class="glass pricing-card pricing-card--featured">
+          <div class="rotating-glow"></div>
+          <div class="best-badge mono">melhor escolha</div>
+          <div class="eyebrow text-accent">StockHub</div>
+          <div class="display pricing-card__price">R$<span class="gradient-text">47</span></div>
+          <div class="mono text-muted">pagamento único · acesso vitalício</div>
+          <ul class="clean-list">
+            <li><span class="list-icon">✓</span>Painel completo dentro do Premiere.</li>
+            <li><span class="list-icon">✓</span>Preview, busca e cópia automática pra pasta do projeto.</li>
+            <li><span class="list-icon">✓</span>Atualizações inclusas.</li>
+            <li><span class="list-icon">✓</span>Suporte por e-mail.</li>
+            <li><span class="list-icon">✓</span>Garantia de 7 dias.</li>
+          </ul>
+          <a class="button button--primary button--full pricing-card__cta" href="#">Quero o StockHub →</a>
+          <div class="mono text-soft pricing-card__payment">pix · cartão · boleto</div>
+        </article>
+        <article class="glass pricing-card">
+          <div class="eyebrow">seu tempo perdido</div>
+          <div class="display pricing-card__muted-price">~30min</div>
+          <div class="mono text-soft">por vídeo procurando asset</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="glass final-cta">
+        <div class="rotating-glow rotating-glow--wide"></div>
+        <h2 class="display">Próximo render,<br><span class="gradient-text">sem perder tempo.</span></h2>
+        <p>Instale em 3 minutos. Use no próximo projeto. Garantia de 7 dias, sem perguntas.</p>
+        <div class="inline-list final-cta__actions">
+          <a class="button button--primary" href="#preco">Adquirir StockHub</a>
+          <a class="button button--ghost" href="#funcionalidades">▶ Ver recursos em uso</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-surface section-surface--light" id="faq">
+      <div class="section-heading">
+        <span class="eyebrow">faq</span>
+        <h2 class="display">Perguntas que <span class="gradient-text">a gente já ouviu.</span></h2>
+      </div>
+      <div class="faq-list" data-faq-list>
+        <details class="faq" open><summary><span>Funciona em qual versão do Premiere?</span><span class="faq__icon">+</span></summary><p>Premiere Pro 2020 ou superior, no Windows e Mac.</p></details>
+        <details class="faq"><summary><span>Quais tipos de arquivo o StockHub reconhece?</span><span class="faq__icon">+</span></summary><p>Áudio (WAV, MP3, AAC), vídeo (MP4, MOV, etc.) e imagens (JPG, PNG, etc.)</p></details>
+        <details class="faq"><summary><span>O que acontece quando arrasto um asset pra timeline?</span><span class="faq__icon">+</span></summary><p>O StockHub copia o arquivo pra pasta do seu projeto automaticamente. Mesmo que você troque de HD depois, o asset continua dentro do projeto — sem "media offline".</p></details>
+        <details class="faq"><summary><span>Preciso de internet?</span><span class="faq__icon">+</span></summary><p>Não, você pode fazer o uso da extensão 100% offline.</p></details>
+        <details class="faq"><summary><span>Os assets ficam onde?</span><span class="faq__icon">+</span></summary><p>Nas suas pastas, no seu disco. O StockHub só lê e organiza — não move nada.</p></details>
+        <details class="faq"><summary><span>Tem garantia?</span><span class="faq__icon">+</span></summary><p>7 dias de garantia incondicional. Não curtiu, devolvemos sem perguntas.</p></details>
+        <details class="faq"><summary><span>Recebo atualizações?</span><span class="faq__icon">+</span></summary><p>Sim, sem custo adicional.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="logo"><span class="glyph">S</span><span>StockHub</span></div>
+    <div class="mono text-soft">© <span data-current-year>2026</span> StockHub · suporte · termos · privacidade</div>
+  </footer>
+</body>
+</html>
