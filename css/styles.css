@@ -41,11 +41,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(1100px 600px at 80% -8%, #6b8aff22, transparent 60%),
     radial-gradient(900px 700px at -10% 25%, #5b7fd915, transparent 60%),
@@ -77,6 +78,10 @@ main,
 .footer {
   position: relative;
   z-index: 1;
+}
+
+main {
+  overflow-x: clip;
 }
 
 .display {
@@ -1604,11 +1609,53 @@ main,
 }
 
 @media (max-width: 900px) {
+  .hero {
+    max-width: 660px;
+  }
+
   .hero__visual {
-    max-width: 720px;
+    width: min(100%, 560px);
+    max-width: 560px;
   }
 
   .floating-card {
+    display: none;
+  }
+
+  .panel-tilt {
+    width: 100%;
+  }
+
+  .extension-panel {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 500px;
+  }
+
+  .extension-sidebar {
+    display: none;
+  }
+
+  .extension-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 10px;
+  }
+
+  .extension-search {
+    min-width: 0;
+    padding: 0 14px;
+  }
+
+  .extension-back,
+  .extension-home {
+    display: none;
+  }
+
+  .extension-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .extension-asset:nth-of-type(n + 7) {
     display: none;
   }
 
@@ -1626,36 +1673,42 @@ main,
 }
 
 @media (max-width: 760px) {
+  :root {
+    --section-gap: 28px;
+  }
+
   .section {
-    padding: 64px 18px;
+    padding: 52px 14px;
   }
 
   .section-surface {
-    width: calc(100% - 20px);
-    padding-right: 18px;
-    padding-left: 18px;
+    width: calc(100% - 16px);
+    padding-right: 14px;
+    padding-left: 14px;
     border-radius: 24px 24px 0 0;
   }
 
   .hero {
-    padding: 36px 18px 48px;
+    padding: 32px 14px 40px;
   }
 
   .hero__grid {
-    gap: 32px;
+    gap: 28px;
   }
 
   .hero__content {
-    max-width: 420px;
+    max-width: none;
   }
 
   .hero__title {
+    max-width: none;
     margin-top: 18px;
     font-size: clamp(31px, 9vw, 40px);
     line-height: 1.04;
   }
 
   .hero__copy {
+    max-width: none;
     margin-top: 18px;
     font-size: 15px;
     line-height: 1.5;
@@ -1697,7 +1750,8 @@ main,
   }
 
   .feature-stripe {
-    padding: 36px 0;
+    padding: 24px 0;
+    gap: 24px;
   }
 
   .panel-tilt {
@@ -1713,43 +1767,24 @@ main,
   }
 
   .extension-panel {
-    grid-template-columns: 1fr;
-    width: 100%;
-    height: auto;
-    min-height: 420px;
-  }
-
-  .extension-sidebar {
-    display: none;
-  }
-
-  .extension-toolbar {
-    grid-template-columns: minmax(0, 1fr) auto;
-    padding: 10px;
-  }
-
-  .extension-search {
-    min-width: 0;
-    padding: 0 14px;
-  }
-
-  .extension-back {
-    display: none;
-  }
-
-  .extension-home {
-    display: none;
+    height: 430px;
   }
 
   .extension-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px 10px;
     padding: 14px 10px;
   }
 
+  .extension-asset:nth-of-type(n + 5) {
+    display: none;
+  }
+
   .hero__visual {
-    width: min(100%, 420px);
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
+    overflow: clip;
   }
 
   .extension-thumb span {
@@ -1780,5 +1815,47 @@ main,
 
   .logo-strip__label {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 12px;
+  }
+
+  .section-surface {
+    width: calc(100% - 12px);
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .hero {
+    padding: 28px 12px 36px;
+  }
+
+  .extension-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px 10px;
+  }
+
+  .extension-thumb span {
+    font-size: 11px;
+  }
+
+  .extension-asset strong {
+    font-size: 11px;
+  }
+
+  .extension-meta {
+    font-size: 9px;
+  }
+
+  .hero__title {
+    font-size: clamp(28px, 8.5vw, 36px);
+  }
+
+  .section-heading h2 {
+    font-size: clamp(26px, 7.5vw, 36px);
   }
 }
