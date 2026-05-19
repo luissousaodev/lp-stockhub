@@ -1767,13 +1767,14 @@ main {
   }
 
   .extension-panel {
-    height: 430px;
+    height: auto;
   }
 
   .extension-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px 10px;
     padding: 14px 10px;
+    overflow: visible;
   }
 
   .extension-asset:nth-of-type(n + 5) {
@@ -1810,7 +1811,18 @@ main {
   }
 
   .feature-demo {
-    min-height: 250px;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .feature-demo--asset {
+    padding: 8px;
+  }
+
+  .feature-demo__video {
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
   }
 
   .logo-strip__label {
@@ -1834,21 +1846,8 @@ main {
   }
 
   .extension-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    padding: 12px 10px;
-  }
-
-  .extension-thumb span {
-    font-size: 11px;
-  }
-
-  .extension-asset strong {
-    font-size: 11px;
-  }
-
-  .extension-meta {
-    font-size: 9px;
+    gap: 8px;
+    padding: 10px 8px;
   }
 
   .hero__title {
