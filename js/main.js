@@ -90,4 +90,23 @@
       });
     });
   }
+
+  const lazyVideos = document.querySelectorAll("video[data-autoplay-when-visible]");
+  if (lazyVideos.length && "IntersectionObserver" in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          if (video.paused) video.play().catch(() => {});
+        } else {
+          if (!video.paused) video.pause();
+        }
+      });
+    }, { rootMargin: "150px 0px", threshold: 0.25 });
+
+    lazyVideos.forEach((video) => videoObserver.observe(video));
+  } else if (lazyVideos.length) {
+    lazyVideos.forEach((video) => video.play().catch(() => {}));
+  }
+
 })();

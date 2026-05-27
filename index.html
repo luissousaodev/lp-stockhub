@@ -29,37 +29,46 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 </head>
 <body>
-  <!-- debug banner removed -->
   <main>
     <section class="hero">
       <div class="hero__grid">
         <div class="hero__content" data-reveal>
           <span class="pill"><span class="dot"></span> PARA EDITORES QUE VIVEM NO PREMIERE</span>
           <h1 class="display hero__title"> 
-            Pare de perder tempo saindo do Premiere <span class="gradient-text accent-word">para procurar assets no PC.</span>
+            Pare de perder tempo <span class="gradient-text accent-word">Edite 3x mais rápido. Sem sair do Premiere.</span>
           </h1>
-          <p class="hero__copy">O StockHub coloca seus SFX, músicas, imagens e vídeos em um painel dentro do Premiere. Você vê o preview, encontra rápido e arrasta para a timeline sem quebrar o ritmo da edição.</p>
+          <p class="hero__copy">O StockHub indexa suas pastas de SFX, músicas, B-rolls e imagens dentro de um painel no Premiere. Você dá hover, ouve o preview, arrasta pra timeline. Sua organização atual continua igual, só fica acessível sem alt-tab.</p>
           <div class="inline-list hero__pills">
-            <span class="pill"><span class="dot"></span> Windows / macOS</span>
-            <span class="pill"><span class="dot"></span> Pagamento único</span>
-            <span class="pill"><span class="dot"></span> Funciona offline</span>
+            <span class="pill"><span class="dot"></span> Windows + macOS</span>
+            <span class="pill"><span class="dot"></span> Pagamento único · sem mensalidade</span>
+            <span class="pill"><span class="dot"></span> Funciona 100% offline</span>
           </div>
           <div class="inline-list hero__actions">
-            <a class="button button--primary" href="#preco">Quero o StockHub →</a>
+            <a class="button button--primary" href="#preco">Quero o StockHub por R$47 →</a>
             <a class="button button--ghost" href="#funcionalidades">▶ Ver em uso</a>
           </div>
-          <div class="inline-list hero__trust">
-            <span class="mono text-muted text-small">Lê suas pastas atuais</span>
-            <span class="mono text-muted text-small">Preview antes de importar</span>
-            <span class="mono text-muted text-small">Cópia automática pro projeto</span>
+          <p class="hero__microcopy mono text-muted text-small">Pix, cartão ou boleto · Acesso vitalício · Garantia de 7 dias</p>
+          <div class="hero__social">
+            <div class="hero__avatars" aria-hidden="true">
+              <span>LS</span>
+              <span>MF</span>
+              <span>RA</span>
+            </div>
+            <span class="mono text-muted text-small">127 downloads no primeiro mês · editores já cortaram 30 min por vídeo. <span class="hero__stars">★★★★★</span></span>
+          </div>
+          <div class="hero__compat mono text-soft text-small">
+            <span class="hero__compat-icon hero__compat-icon--pr">Pr</span>
+            <span>compatível com Premiere Pro 2020+ · Windows · macOS</span>
           </div>
         </div>
 
-        <div class="hero__visual" id="demo" data-reveal data-reveal-delay="120">
+        <div class="hero__visual" data-reveal data-reveal-delay="120">
           <div class="aurora"></div>
           <div class="rotating-glow"></div>
-          <div class="panel-tilt floating floating--panel">
-            <article class="premiere-panel extension-panel">
+          <div class="hero__demo-frame">
+            <!-- TODO: adicionar poster real se quiser preview estático antes do autoplay. -->
+            <video class="hero__demo-video" src="Assets/Arrasta%20e%20solta.webm" width="1920" height="1080" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do StockHub arrastando assets para a timeline" onerror="this.parentElement.classList.add('is-fallback')"></video>
+            <article class="premiere-panel extension-panel hero__demo-fallback" aria-label="Mockup estático do painel StockHub" hidden>
               <aside class="extension-sidebar">
                 <div class="extension-brand"><span class="extension-brand__icon">SH</span><span>StockHUB</span></div>
                 <nav class="extension-nav">
@@ -155,197 +164,529 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             </article>
           </div>
 
-          <div class="floating-card floating-card--left card floating">
-            <span class="floating-card__icon floating-card__icon--brand">♪</span>
-            <div>
-              <strong>boom-deep.wav</strong>
-              <div class="mono text-soft text-small">SFX · 0:01 · adicionado</div>
-            </div>
-          </div>
-          <div class="floating-card floating-card--right card floating">
-            <span class="floating-card__icon floating-card__icon--success">✓</span>
-            <div>
-              <strong>copiado pra pasta do projeto</strong>
-              <div class="mono text-soft text-small">sem media offline</div>
-            </div>
-          </div>
         </div>
       </div>
 
+    </section>
+
+    <section class="proof-strip" aria-label="Prova social rápida">
+      <div class="proof-strip__inner">
+        <span class="proof-strip__label mono">EDITORES QUE USAM STOCKHUB TRABALHAM EM:</span>
+        <div class="proof-strip__items mono" aria-label="YouTube, TikTok, Reels, VSL, Documentário e Comercial">
+          <span><i>YT</i>YouTube</span>
+          <span><i>TT</i>TikTok</span>
+          <span><i>IG</i>Reels</span>
+          <span><i>VS</i>VSL</span>
+          <span><i>DO</i>Documentário</span>
+          <span><i>CM</i>Comercial</span>
+        </div>
+      </div>
     </section>
 
     <section class="section section-surface section-surface--light" id="problema">
       <div class="section-heading" data-reveal>
-        <h2 class="display">Quanto tempo você perde<br><span class="gradient-text">procurando o asset certo?</span></h2>
+        <h2 class="display">Quanto tempo você perde<br><span class="text-accent">entre suas pastas e o Premiere?</span></h2>
+        <p>A edição em si dura 1 hora. Mas você passou 3 horas procurando o video certo, abrindo 4 pastas de overlays, escutando 20 trilhas pra escolher uma. Aí trocou de HD e o projeto ficou "media offline". De novo.</p>
       </div>
-      <div class="grid grid--2 section-grid">
-        <article class="glass problem-card" data-reveal>
-          <div class="eyebrow">Hoje · sem StockHub</div>
-          <div class="display card-title">30+ min por vídeo<br>só procurando.</div>
-          <ul class="clean-list clean-list--muted">
-            <li><span class="list-icon list-icon--bad">×</span>Alt-tab entre Finder, navegador e pasta de assets.</li>
-            <li><span class="list-icon list-icon--bad">×</span>Importa, escuta, descarta, repete.</li>
-            <li><span class="list-icon list-icon--bad">×</span>Importa de novo o mesmo asset porque esqueceu onde tinha posto.</li>
-            <li><span class="list-icon list-icon--bad">×</span>Troca de HD e o projeto fica "media offline".</li>
-          </ul>
-          <div class="section-symbol">⌛</div>
+      <div class="pain-scenes section-grid">
+        <article class="pain-scene" data-reveal>
+          <span class="pain-scene__icon" aria-hidden="true">🔄</span>
+          <div>
+            <h3>Alt-tab infinito</h3>
+            <p>Premiere, pastas, navegador, pasta de SFX, biblioteca de música, volta pro Premiere. Cinco vezes por minuto. Vinte vezes por corte.</p>
+          </div>
         </article>
-        <article class="glass problem-card problem-card--featured" data-reveal data-reveal-delay="120">
-          <div class="rotating-glow rotating-glow--card"></div>
-          <div class="eyebrow text-accent">com StockHub</div>
-          <div class="display card-title">2 minutos.<br><span class="gradient-text">Direto na timeline.</span></div>
-          <ul class="clean-list">
-            <li><span class="list-icon list-icon--good">✓</span>Tudo dentro do Premiere, em um painel só.</li>
-            <li><span class="list-icon list-icon--good">✓</span>Preview ao passar o mouse, antes de soltar.</li>
-            <li><span class="list-icon list-icon--good">✓</span>Lê as suas pastas do jeito que estão.</li>
-            <li><span class="list-icon list-icon--good">✓</span>Drag & drop com cópia automática pra pasta do projeto.</li>
-          </ul>
-          <div class="section-symbol">⚡</div>
+        <article class="pain-scene" data-reveal data-reveal-delay="80">
+          <span class="pain-scene__icon" aria-hidden="true">📂</span>
+          <div>
+            <h3>"Onde foi que eu salvei?"</h3>
+            <p>Você sabe que tem aquele B-roll perfeito em algum lugar. Sabe que baixou faz três meses. Não lembra a pasta. Acaba importando de novo.</p>
+          </div>
+        </article>
+        <article class="pain-scene" data-reveal data-reveal-delay="160">
+          <span class="pain-scene__icon" aria-hidden="true">🎧</span>
+          <div>
+            <h3>Escutar pra descartar</h3>
+            <p>Importa o SFX no projeto pra ouvir. Não é esse. Apaga. Importa o próximo. Não é esse. Apaga. Repete. Repete. Repete.</p>
+          </div>
+        </article>
+        <article class="pain-scene" data-reveal data-reveal-delay="240">
+          <span class="pain-scene__icon" aria-hidden="true">⚠️</span>
+          <div>
+            <h3>"Media offline"</h3>
+            <p>Troca o HD ou move a pasta e o projeto inteiro vira tela vermelha. Você gasta a próxima hora caçando arquivos pra religar.</p>
+          </div>
+        </article>
+      </div>
+      <p class="pain-transition display" data-reveal>No fim do dia, você editou 1 vídeo.<br><span class="gradient-text">Mas trabalhou as 8 horas.</span></p>
+    </section>
+
+    <section class="section emotional-turn">
+      <div class="emotional-turn__problem" data-reveal>
+        <p>O problema nunca foi a sua organização. <strong>Sua pasta de assets já está como deveria estar.</strong></p>
+        <p>O problema é que toda vez que você precisa de algo, precisa sair do Premiere. Cada saída quebra o ritmo, quebra o foco, e some 5 minutos do seu dia.</p>
+      </div>
+
+      <p class="emotional-turn__solution" data-reveal data-reveal-delay="160">
+        O StockHub não pede pra você mudar nada. Ele só traz suas pastas pra dentro do Premiere, com preview, busca e drag & drop.
+      </p>
+
+      <p class="emotional-turn__kicker" data-reveal data-reveal-delay="240">
+        É a mesma organização,<br><span class="text-accent">sem o alt-tab.</span>
+      </p>
+    </section>
+
+    <section class="section section-surface section-surface--light" id="funcionalidades">
+      <div class="solution-intro">
+        <div class="solution-intro__copy" data-reveal>
+          <span class="pill"><span class="dot"></span> A SOLUÇÃO</span>
+          <h2 class="display">StockHub é um painel<br><span class="text-accent">que mora dentro do Premiere.</span></h2>
+          <p>Você instala uma vez. Ele aparece do lado da sua timeline, como qualquer painel nativo do Premiere. Aponta as pastas dos seus assets, B-rolls, imagens, SFX, músicas, e o StockHub indexa tudo sem mover um arquivo sequer.</p>
+          <p>A partir daí, sua biblioteca inteira está a um clique. Sem alt-tab. Sem abrir as pastas. Sem importar pra ouvir e descartar.</p>
+
+          <div class="solution-benefits">
+            <article>
+              <span aria-hidden="true">✦</span>
+              <div>
+                <h3>Preview antes de soltar</h3>
+                <p>Hover no SFX e ele toca. Hover no B-roll e ele roda em loop. Você decide antes de jogar na timeline.</p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">✦</span>
+              <div>
+                <h3>Drag & drop com cópia automática</h3>
+                <p>Arrasta pro timeline e o StockHub copia o arquivo pra pasta do projeto. Você troca de HD depois e nada fica offline.</p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">✦</span>
+              <div>
+                <h3>Busca por nome em milissegundos</h3>
+                <p>Lembra que tem um "boom" em algum lugar? Digita "boom". Aparece. Funciona com áudio, vídeo, imagem.</p>
+              </div>
+            </article>
+            <article>
+              <span aria-hidden="true">✦</span>
+              <div>
+                <h3>Suas pastas, do jeito que estão</h3>
+                <p>Não pede pra reorganizar nada. Aponta a pasta, ele indexa. Sua estrutura atual continua igual.</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="solution-intro__microcopy mono text-muted text-small">100% offline. Funciona com HD externo. Compatível com Premiere Pro 2020+.</p>
+          <a class="button button--ghost solution-intro__cta" href="#preco">Ver preço e garantia ↓</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="feature-stripes">
+        <article class="feature-stripe" data-reveal>
+          <div class="feature-stripe__media">
+            <div class="feature-demo feature-demo--asset">
+              <!-- TODO: adicionar poster real se quiser preview estático antes do lazy play. -->
+              <video class="feature-demo__video" src="Assets/Arrasta%20e%20solta.webm" width="1920" height="1080" muted loop playsinline preload="none" data-autoplay-when-visible aria-label="Demonstração de drag and drop no StockHub"></video>
+            </div>
+          </div>
+          <div class="feature-stripe__copy">
+            <span class="pill"><span class="dot"></span> DRAG & DROP</span>
+            <h3 class="display">Arrasta, solta,<br><span class="text-accent">e nunca mais perde o arquivo.</span></h3>
+            <p class="text-block">Seleciona qualquer asset do painel e joga direto na timeline. O StockHub copia o arquivo pra pasta do seu projeto automaticamente. Troque de HD, mude de máquina, mande pra outro editor, nunca mais "media offline".</p>
+            <ul class="clean-list">
+              <li><span class="list-icon">✓</span>Funciona com áudio, vídeo e imagem, sem converter formato.</li>
+              <li><span class="list-icon">✓</span>Cópia automática pra pasta do projeto, transparente pra você.</li>
+              <li><span class="list-icon">✓</span>Reconhece o ponto do playhead e solta no lugar certo.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="feature-stripe" data-reveal>
+          <div class="feature-stripe__copy">
+            <span class="pill"><span class="dot"></span> ORGANIZAÇÃO</span>
+            <h3 class="display">Lê suas pastas<br><span class="text-accent">do jeito que estão.</span></h3>
+            <p class="text-block">Aponta a pasta dos seus assets uma vez e o StockHub indexa sem mover nada. Sua organização continua exatamente como está, só fica acessível dentro do Premiere, do lado da timeline.</p>
+            <ul class="clean-list">
+              <li><span class="list-icon">✓</span>Zero reorganização. A pasta que você já tem funciona.</li>
+              <li><span class="list-icon">✓</span>Funciona com HD externo, NAS, ou disco local.</li>
+              <li><span class="list-icon">✓</span>Busca por nome encontra qualquer asset em milissegundos.</li>
+            </ul>
+          </div>
+          <div class="feature-stripe__media">
+            <div class="feature-demo feature-demo--asset">
+              <!-- TODO: adicionar poster real se quiser preview estático antes do lazy play. -->
+              <video class="feature-demo__video" src="Assets/cateegorias.webm" width="1920" height="1080" muted loop playsinline preload="none" data-autoplay-when-visible aria-label="Demonstração de organização de assets no StockHub"></video>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-stripe" data-reveal>
+          <div class="feature-stripe__media">
+            <div class="feature-demo feature-demo--asset">
+              <!-- TODO: adicionar poster real se quiser preview estático antes do lazy play. -->
+              <video class="feature-demo__video" src="Assets/Preview.webm" width="1920" height="1080" muted loop playsinline preload="none" data-autoplay-when-visible aria-label="Demonstração de preview no StockHub"></video>
+            </div>
+          </div>
+          <div class="feature-stripe__copy">
+            <span class="pill"><span class="dot"></span> PREVIEW</span>
+            <h3 class="display">Veja e ouça<br><span class="text-accent">antes de soltar.</span></h3>
+            <p class="text-block">Passe o mouse e o preview roda no painel. Ouça o SFX com waveform, veja o B-roll em loop, abra a imagem em tela cheia. Você decide qual asset vai pra timeline antes de mexer no projeto.</p>
+            <ul class="clean-list">
+              <li><span class="list-icon">✓</span>Preview de áudio com waveform visível.</li>
+              <li><span class="list-icon">✓</span>Preview de vídeo em loop ao passar o mouse.</li>
+              <li><span class="list-icon">✓</span>Preview de imagem em tela cheia com um clique.</li>
+            </ul>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="funcionalidades">
+    <section class="section section-surface section-surface--light" id="depoimentos">
+      <!-- TODO: substituir os cards abaixo por 3 depoimentos reais com nome, função, foto e métrica antes de publicar. -->
       <div class="section-heading" data-reveal>
-        <span class="eyebrow">funcionalidades</span>
-        <h2 class="display">Tudo o que você precisa,<br><span class="gradient-text">para acelerar sua edição.</span></h2>
+        <span class="eyebrow">O QUE EDITORES ESTÃO DIZENDO</span>
+        <h2 class="display">A diferença que<br><span class="gradient-text">30 minutos economizados faz.</span></h2>
+        <p>Use este bloco para colocar provas reais de editores que testaram o StockHub no próprio fluxo de Premiere.</p>
       </div>
 
-      <article class="feature-stripe" data-reveal>
-        <div class="feature-stripe__media">
-          <div class="feature-demo feature-demo--asset">
-            <video class="feature-demo__video" src="Assets/Arrasta%20e%20solta.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de drag and drop no StockHub"></video>
+      <div class="testimonial-grid" data-reveal>
+        <article class="testimonial-card">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__photo">01</div>
+            <div>
+              <h3>Depoimento real em coleta</h3>
+              <p>Editor freelancer · Reels/VSL</p>
+            </div>
           </div>
-        </div>
-        <div class="feature-stripe__copy">
-          <span class="pill"><span class="dot"></span> DRAG & DROP</span>
-          <h3 class="display">Arrasta, solta <span class="gradient-text">e nunca mais perde o arquivo.</span></h3>
-          <p class="text-block">Selecione qualquer asset do painel e jogue direto na timeline. O StockHub copia o arquivo pra pasta do seu projeto automaticamente — nunca mais "media offline" quando você trocar de HD.</p>
-          <ul class="clean-list">
-            <li><span class="list-icon">✓</span>Áudio, vídeo e imagens.</li>
-            <li><span class="list-icon">✓</span>Cópia automática pra pasta do projeto.</li>
-            <li><span class="list-icon">✓</span>Reconhece o ponto do playhead.</li>
-          </ul>
-        </div>
-      </article>
+          <div class="testimonial-card__stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+          <blockquote>Substitua este texto por uma fala real sobre o que mudou na rotina de edição depois do StockHub.</blockquote>
+          <span class="testimonial-card__metric">Métrica real: tempo economizado por semana</span>
+        </article>
 
-      <article class="feature-stripe" data-reveal>
-        <div class="feature-stripe__copy">
-          <span class="pill"><span class="dot"></span> ORGANIZAÇÃO</span>
-          <h3 class="display">Lê suas pastas <span class="gradient-text">do jeito que estão.</span></h3>
-          <p class="text-block">Aponta a pasta dos seus assets e o StockHub indexa sem mover nada. Sua organização atual continua igual — só fica acessível dentro do Premiere.</p>
-          <ul class="clean-list">
-            <li><span class="list-icon">✓</span>Sem reorganização manual.</li>
-            <li><span class="list-icon">✓</span>Funciona com HD externo.</li>
-            <li><span class="list-icon">✓</span>Busca por nome.</li>
-          </ul>
-        </div>
-        <div class="feature-stripe__media">
-          <div class="feature-demo feature-demo--asset">
-            <video class="feature-demo__video" src="Assets/cateegorias.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de organização de assets no StockHub"></video>
+        <article class="testimonial-card">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__photo">02</div>
+            <div>
+              <h3>Depoimento real em coleta</h3>
+              <p>Editor de agência · B-roll/SFX</p>
+            </div>
           </div>
-        </div>
-      </article>
+          <div class="testimonial-card__stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+          <blockquote>Substitua este texto por uma fala real sobre busca, preview, drag & drop ou media offline.</blockquote>
+          <span class="testimonial-card__metric">Métrica real: projetos entregues ou retrabalho evitado</span>
+        </article>
 
-      <article class="feature-stripe" data-reveal>
-        <div class="feature-stripe__media">
-          <div class="feature-demo feature-demo--asset">
-            <video class="feature-demo__video" src="Assets/Preview.webm" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração de preview no StockHub"></video>
+        <article class="testimonial-card">
+          <div class="testimonial-card__header">
+            <div class="testimonial-card__photo">03</div>
+            <div>
+              <h3>Depoimento real em coleta</h3>
+              <p>Editor de canal · YouTube/Documentário</p>
+            </div>
           </div>
-        </div>
-        <div class="feature-stripe__copy">
-          <span class="pill"><span class="dot"></span> PREVIEW</span>
-          <h3 class="display">Veja antes de <span class="gradient-text">soltar.</span></h3>
-          <p class="text-block">Passe o mouse e o preview roda no painel. Ouça o SFX, veja o B-roll em loop e decida antes de jogar na timeline.</p>
-          <ul class="clean-list">
-            <li><span class="list-icon">✓</span>Preview de áudio com waveform.</li>
-            <li><span class="list-icon">✓</span>Preview de vídeo em loop.</li>
-            <li><span class="list-icon">✓</span>Preview de imagens em tela cheia.</li>
-          </ul>
-        </div>
-      </article>
+          <div class="testimonial-card__stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+          <blockquote>Substitua este texto por uma fala real que prove que o painel funciona no dia a dia.</blockquote>
+          <span class="testimonial-card__metric">Métrica real: minutos economizados por vídeo</span>
+        </article>
+      </div>
     </section>
 
-    <section class="section" id="como">
+    <section class="section">
       <div class="section-heading" data-reveal>
-        <span class="eyebrow">como funciona</span>
-        <h2 class="display">Pronto em <span class="gradient-text">3 minutos.</span></h2>
+        <h2 class="display">O StockHub não é<br><span class="text-accent">pra todo mundo.</span></h2>
       </div>
-      <div class="grid grid--3 section-grid">
-        <article class="glass step-card" data-reveal><div class="display gradient-text step-card__number">01</div><h3>Instale</h3><p>Baixe o instalador (.zxp). Clique duas vezes. O Premiere reconhece o painel automaticamente.</p></article>
-        <article class="glass step-card" data-reveal data-reveal-delay="100"><div class="display gradient-text step-card__number">02</div><h3>Aponte suas pastas</h3><p>Arraste a pasta de assets para o StockHub. Ele lê e indexa sem mexer nos seus arquivos.</p></article>
-        <article class="glass step-card" data-reveal data-reveal-delay="200"><div class="display gradient-text step-card__number">03</div><h3>Edite mais rápido</h3><p>Abra qualquer projeto: o painel está lá, do lado da timeline. Pronto.</p></article>
+
+      <div class="fit-grid section-grid">
+        <article class="fit-card fit-card--yes" data-reveal>
+          <h3>É pra você se:</h3>
+          <ul class="fit-list">
+            <li><span class="list-icon list-icon--good">✓</span>Você edita pelo menos 2 vídeos por semana no Premiere Pro.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Sua biblioteca de assets tem mais de 50 arquivos espalhados em pastas.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Você já perdeu tempo procurando aquele SFX que sabia que tinha.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Você já teve um projeto virar "media offline" depois de trocar de HD.</li>
+            <li><span class="list-icon list-icon--good">✓</span>Você quer ganhar 30 min por vídeo sem mexer na sua organização atual.</li>
+          </ul>
+        </article>
+
+        <article class="fit-card fit-card--no" data-reveal data-reveal-delay="120">
+          <h3>Não é pra você se:</h3>
+          <ul class="fit-list">
+            <li><span class="list-icon list-icon--muted">×</span>Você edita esporadicamente, sem rotina.</li>
+            <li><span class="list-icon list-icon--muted">×</span>Você usa CapCut, DaVinci ou Final Cut como editor principal.</li>
+            <li><span class="list-icon list-icon--muted">×</span>Você tem menos de 20 assets e sabe onde cada um está.</li>
+            <li><span class="list-icon list-icon--muted">×</span>Você não quer instalar nenhuma extensão no Premiere.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="fit-section__close">Se você se viu na coluna da esquerda, continue lendo. O próximo bloco mostra exatamente o que você vai receber.</p>
+    </section>
+
+    <section class="section" id="fundador">
+      <!-- TODO: inserir nome real, foto real e história real do fundador antes de publicar. -->
+      <div class="founder-grid" data-reveal>
+        <div class="founder-photo" aria-label="Espaço para foto real do fundador">
+          <div class="founder-photo__placeholder">
+            <span>Foto do fundador</span>
+            <small>Fundador ou equipe StockHub</small>
+          </div>
+        </div>
+
+        <div class="founder-copy">
+          <span class="eyebrow">QUEM CONSTRUIU O STOCKHUB</span>
+          <h2 class="display">Criado por quem<br><span class="text-accent">sentiu essa dor.</span></h2>
+          <p>Edito há mais de 3 anos na maior empresa de IA do Brasil, em um time de direct response, mercado de volume e velocidade, com dezenas de ads e VSLs sendo produzidos diariamente.</p>
+          <p>Foi nesse ritmo que percebi onde meu tempo realmente sumia: não na timeline, mas antes dela. Cada pausa para procurar asset, abrir pasta ou caçar referência quebrava o foco. Comecei a mapear o workflow e a programar soluções para os pontos de fricção. O StockHub nasceu aí, primeiro como ferramenta minha, depois adotado pela equipe inteira.</p>
+          <p>Sou editor, entendo de marketing porque é o que faço todos os dias, e programo porque precisei resolver problemas reais do meu fluxo, não por modismo.</p>
+          <div class="founder-proof mono">Credibilidade real: anos de edição, canais/clientes ou projetos relevantes.</div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="preco">
+      <!-- TODO: confirmar que bônus #1, #2 e #3 existem e serão entregues após a compra. -->
       <div class="section-heading" data-reveal>
-        <span class="eyebrow">preço</span>
-        <h2 class="display">Uma vez. <span class="gradient-text">Para sempre.</span></h2>
-        <p>Sem mensalidade, sem upgrade pago, sem letra miúda. Atualizações inclusas.</p>
+        <span class="eyebrow">A OFERTA</span>
+        <h2 class="display">Uma vez.<br><span class="text-accent">Para sempre.</span></h2>
+        <p>R$47 hoje e o StockHub é seu pra sempre. Painel + bônus + atualizações + suporte inclusos. Sem mensalidade. Sem letra miúda.</p>
       </div>
-      <div class="pricing-grid section-grid">
-        <article class="glass pricing-card" data-reveal>
-          <div class="eyebrow">comprando packs avulsos</div>
-          <div class="display pricing-card__muted-price">R$50-200</div>
-          <div class="mono text-soft">cada · e ainda sem organização</div>
-        </article>
-        <article class="glass pricing-card pricing-card--featured" data-reveal data-reveal-delay="100">
-          <div class="rotating-glow"></div>
-          <div class="best-badge mono">melhor escolha</div>
-          <div class="eyebrow text-accent">StockHub</div>
-          <div class="display pricing-card__price">R$<span class="gradient-text">47</span></div>
-          <div class="mono text-muted">pagamento único · acesso vitalício</div>
-          <ul class="clean-list">
-            <li><span class="list-icon">✓</span>Painel completo dentro do Premiere.</li>
-            <li><span class="list-icon">✓</span>Preview, busca e cópia automática pra pasta do projeto.</li>
-            <li><span class="list-icon">✓</span>Atualizações inclusas.</li>
-            <li><span class="list-icon">✓</span>Suporte por e-mail.</li>
-            <li><span class="list-icon">✓</span>Garantia de 7 dias.</li>
+
+      <div class="value-stack__panel" data-reveal>
+        <div class="value-stack__group">
+          <h3 class="value-stack__group-title">Tudo que você <em>recebe!</em></h3>
+          <ul class="value-stack__list"> 
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--core" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <line x1="9" y1="4" x2="9" y2="20"/>
+                  <line x1="13" y1="9" x2="18" y2="9"/>
+                  <line x1="13" y1="13" x2="18" y2="13"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>Painel StockHub no Premiere Pro</strong>
+                <span>Preview, busca, drag & drop. Windows + macOS.</span>
+              </div>
+              <span class="value-stack__price">R$197</span>
+            </li>
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--update" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/>
+                  <polyline points="21 3 21 8 16 8"/>
+                  <path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
+                  <polyline points="3 21 3 16 8 16"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>Atualizações vitalícias</strong>
+                <span>Toda nova versão chega no seu e-mail. Sem cobrar mais.</span>
+              </div>
+              <span class="value-stack__price">R$50/ano</span>
+            </li>
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--support" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-3.7-.9L3 21l1.9-5.3A8.4 8.4 0 1 1 21 11.5z"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>Suporte por e-mail em 24h</strong>
+                <span>Em português, com humano de verdade. Sem chatbot.</span>
+              </div>
+              <span class="value-stack__price">R$40</span>
+            </li>
           </ul>
-          <a class="button button--primary button--full pricing-card__cta" href="https://pay.kiwify.com.br/QQikZpu">Quero o StockHub →</a>
-          <div class="mono text-soft pricing-card__payment">pix · cartão · boleto</div>
-        </article>
-        <article class="glass pricing-card" data-reveal data-reveal-delay="200">
-          <div class="eyebrow">seu tempo perdido</div>
-          <div class="display pricing-card__muted-price">~30min</div>
-          <div class="mono text-soft">por vídeo procurando asset</div>
-        </article>
+        </div>
+
+        <div class="value-stack__divider"></div>
+
+        <div class="value-stack__group">
+          <h3 class="value-stack__group-title">Super <em>Bônus</em> exclusivos</h3>
+          <ul class="value-stack__list">
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--sfx" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18V6l11-2v12"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="17" cy="16" r="3"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>SuperPack de 50 SFXs profissionais</strong>
+                <span>Transitions, impactos, swoosh, UI. Já organizado em pastas.</span>
+              </div>
+              <span class="value-stack__price">R$67</span>
+            </li>
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--video" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <polygon points="10 9 16 12 10 15" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>Tutorial: Organização que economiza 5h/semana</strong>
+                <span>Vídeo de 20min mostrando como estruturar suas pastas.</span>
+              </div>
+              <span class="value-stack__price">R$37</span>
+            </li>
+            <li class="value-stack__item">
+              <span class="value-stack__icon value-stack__icon--community" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/>
+                  <path d="M3 21a7 7 0 0 1 14 0"/>
+                  <circle cx="19" cy="8" r="2.5"/>
+                  <path d="M21 21a4 4 0 0 0-6-3.5"/>
+                </svg>
+              </span>
+              <div class="value-stack__copy">
+                <strong>Grupo Privado de Editores</strong>
+                <span>Discord/Telegram com editores que vivem da edição.</span>
+              </div>
+              <span class="value-stack__price">R$20/mês</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="value-stack__divider value-stack__divider--strong"></div>
+
+        <div class="value-stack__total">
+          <span class="value-stack__total-label">Valor real do pacote</span>
+          <span class="value-stack__total-value">R$361</span>
+        </div>
+
+        <div class="value-stack__offer">
+          <div class="value-stack__offer-price-block">
+            <div class="value-stack__offer-price">
+              <strong>R$47</strong>
+              <span class="value-stack__offer-suffix">à vista</span>
+            </div>
+            <span class="value-stack__offer-save">economia de R$314 · 87% OFF</span>
+          </div>
+          <span class="value-stack__offer-meta">Pagamento único<br>Acesso Vitalício</span>
+        </div>
+
+        <a class="value-stack__cta" href="https://pay.kiwify.com.br/QQikZpu">
+          Quero Adquirir Agora
+          <svg class="value-stack__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="13 6 19 12 13 18"/>
+          </svg>
+        </a>
+
+        <div class="value-stack__badges">
+          <span class="value-stack__badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            7 Dias de Garantia
+          </span>
+          <span class="value-stack__badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="9" rx="2"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+            Compra Segura
+          </span>
+        </div>
+      </div>
+
+      <p class="pricing-footnote mono text-muted text-small">Pagamento processado pela Kiwify. Acesso liberado imediatamente após confirmação. Garantia de 7 dias incondicional.</p>
+    </section>
+
+    <section class="section">
+      <div class="guarantee-box" data-reveal>
+        <img class="guarantee-seal" src="Assets/garantia.png" alt="Garantia de 7 dias incondicional" width="168" height="168" loading="lazy">
+        <div class="guarantee-copy">
+          <span class="eyebrow text-accent">GARANTIA TOTAL</span>
+          <h2 class="display">Devolvemos <span class="gradient-text">cada centavo.</span></h2>
+          <h3 class="guarantee-copy__condition">Se em 7 dias o StockHub não economizar pelo menos 1 hora da sua edição.</h3>
+          <p>Instala. Usa no próximo projeto. Se sentir que não funciona pra você, manda um e-mail. Sem formulário, sem perguntas, sem burocracia.</p>
+          <p>Você fica com os bônus. A gente devolve os R$47 em até 5 dias úteis.</p>
+          <p>O risco é todo nosso. Pra você, é só testar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section objection-letter">
+      <div class="objection-letter__inner" data-reveal>
+        <span class="eyebrow">ANTES DE VOCÊ FECHAR ESSA PÁGINA</span>
+        <h2 class="display">Eu sei o que tá passando<br><span class="text-accent">na sua cabeça agora.</span></h2>
+        <p>Provavelmente você tá pensando uma dessas coisas:</p>
+
+        <h3>"E se isso deixar meu Premiere lento?"</h3>
+        <p>O StockHub é uma extensão CEP (Common Extensibility Platform) — a mesma tecnologia que o próprio Adobe usa pros painéis nativos. Não roda em background, não consome RAM extra, não trava render. Ele só "acorda" quando você abre o painel.</p>
+
+        <h3>"E se a Adobe atualizar o Premiere e isso parar de funcionar?"</h3>
+        <p>A gente atualiza junto. Toda vez que sai uma versão nova do Premiere, testamos e ajustamos em até 7 dias. Você recebe a versão nova por e-mail sem pagar nada a mais. Foi assim com a versão 2024, com a 2025, e vai continuar sendo.</p>
+
+        <h3>"Por que tão barato? R$47 é estranho."</h3>
+        <p>Porque eu construí pra mim primeiro. O custo de manter pra mais pessoas é baixo — não tem servidor pesado, não tem mensalidade pra plataforma. Prefiro vender pra 1.000 editores a R$47 do que pra 100 a R$470. E ainda acho que a galera vai voltar pra comprar o próximo produto.</p>
+
+        <h3>"Já tenho minha organização, vou ter que mudar tudo?"</h3>
+        <p>Não. O StockHub lê a pasta que você já tem, do jeito que tá. Se sua organização é "tudo na área de trabalho", funciona. Se é uma estrutura militar com 47 subpastas, funciona também. Ele só indexa.</p>
+
+        <h3>"E se eu não usar o suficiente pra valer R$47?"</h3>
+        <p>Você tem 7 dias de garantia incondicional. Instala, usa no próximo projeto, e se não economizar pelo menos 1 hora, manda o e-mail e devolvo. Sério. Sem perguntas.</p>
+
+        <p class="objection-letter__close">Se sobrou alguma objeção que não cobri, manda um e-mail antes de comprar. Eu respondo pessoalmente.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="glass final-cta" data-reveal>
         <div class="rotating-glow rotating-glow--wide"></div>
-        <h2 class="display">Próximo render,<br><span class="gradient-text">sem perder tempo.</span></h2>
-        <p>Instale em 3 minutos. Use no próximo projeto. Garantia de 7 dias, sem perguntas.</p>
-        <div class="inline-list final-cta__actions">
-          <a class="button button--primary" href="#preco">Adquirir StockHub</a>
-          <a class="button button--ghost" href="#funcionalidades">▶ Ver recursos em uso</a>
-        </div>
+        <h2 class="display">Seu próximo render,<br><span class="gradient-text">sem perder 30 minutos.</span></h2>
+        <p>Instala em 3 minutos. Usa no próximo projeto. Se não economizar tempo de verdade, devolvemos seu dinheiro. Não tem como sair perdendo.</p>
+        <a class="button button--primary final-cta__button" href="https://pay.kiwify.com.br/QQikZpu">Quero o StockHub por R$47 →</a>
+        <div class="mono text-soft text-small final-cta__microcopy">pagamento único · acesso imediato · garantia incondicional de 7 dias</div>
       </div>
     </section>
 
     <section class="section section-surface section-surface--light" id="faq">
       <div class="section-heading" data-reveal>
-        <span class="eyebrow">faq</span>
-        <h2 class="display">Perguntas que <span class="gradient-text">a gente já ouviu.</span></h2>
+        <span class="eyebrow">PERGUNTAS FREQUENTES</span>
+        <h2 class="display">A gente já ouviu<br><span class="text-accent">todas essas.</span></h2>
       </div>
       <div class="faq-list" data-faq-list data-reveal>
-        <details class="faq" open><summary><span>Funciona em qual versão do Premiere?</span><span class="faq__icon">+</span></summary><p>Premiere Pro 2020 ou superior, no Windows e Mac.</p></details>
-        <details class="faq"><summary><span>Quais tipos de arquivo o StockHub reconhece?</span><span class="faq__icon">+</span></summary><p>Áudio (WAV, MP3, AAC), vídeo (MP4, MOV, etc.) e imagens (JPG, PNG, etc.)</p></details>
-        <details class="faq"><summary><span>O que acontece quando arrasto um asset pra timeline?</span><span class="faq__icon">+</span></summary><p>O StockHub copia o arquivo pra pasta do seu projeto automaticamente. Mesmo que você troque de HD depois, o asset continua dentro do projeto — sem "media offline".</p></details>
-        <details class="faq"><summary><span>Preciso de internet?</span><span class="faq__icon">+</span></summary><p>Não, você pode fazer o uso da extensão 100% offline.</p></details>
-        <details class="faq"><summary><span>Os assets ficam onde?</span><span class="faq__icon">+</span></summary><p>Nas suas pastas, no seu disco. O StockHub só lê e organiza — não move nada.</p></details>
-        <details class="faq"><summary><span>Tem garantia?</span><span class="faq__icon">+</span></summary><p>7 dias de garantia incondicional. Não curtiu, devolvemos sem perguntas.</p></details>
-        <details class="faq"><summary><span>Recebo atualizações?</span><span class="faq__icon">+</span></summary><p>Sim, sem custo adicional.</p></details>
+        <details class="faq" open><summary><span>Funciona em qual versão do Premiere?</span><span class="faq__icon">+</span></summary><p>Premiere Pro 2020 ou superior, em Windows e Mac. Se a Adobe lançar uma versão nova, atualizamos em até 7 dias.</p></details>
+        <details class="faq"><summary><span>Como recebo o StockHub depois da compra?</span><span class="faq__icon">+</span></summary><p>Por e-mail, no instante que o pagamento for confirmado. Você recebe o link de download do instalador (.zxp) e um vídeo curto de instalação.</p></details>
+        <details class="faq"><summary><span>Quais tipos de arquivo o StockHub reconhece?</span><span class="faq__icon">+</span></summary><p>Áudio (WAV, MP3, AAC, M4A), vídeo (MP4, MOV, MKV, AVI), imagens (JPG, PNG, GIF, WEBP). Se você usa um formato exótico, manda e-mail antes — possivelmente já tá na lista.</p></details>
+        <details class="faq"><summary><span>O que acontece quando arrasto um asset pra timeline?</span><span class="faq__icon">+</span></summary><p>O StockHub copia automaticamente o arquivo pra pasta do seu projeto. Mesmo que você troque de HD depois, o asset continua junto do projeto. Sem "media offline".</p></details>
+        <details class="faq"><summary><span>Preciso de internet pra usar?</span><span class="faq__icon">+</span></summary><p>Não. Depois de instalado, o StockHub funciona 100% offline. Só precisa de internet pra baixar atualizações novas (opcionais).</p></details>
+        <details class="faq"><summary><span>Onde ficam os meus assets?</span><span class="faq__icon">+</span></summary><p>Continuam nas suas pastas, no seu disco. O StockHub só lê e indexa — não move, não copia, não duplica nada.</p></details>
+        <details class="faq"><summary><span>Vai deixar meu Premiere lento?</span><span class="faq__icon">+</span></summary><p>Não. O painel só consome processamento quando aberto. Não roda em background, não interfere em render, não come RAM extra.</p></details>
+        <details class="faq"><summary><span>Tem garantia?</span><span class="faq__icon">+</span></summary><p>7 dias de garantia incondicional. Não curtiu, manda um e-mail e devolvemos. Sem formulário, sem perguntas.</p></details>
+        <details class="faq"><summary><span>Como é o suporte?</span><span class="faq__icon">+</span></summary><p>Por e-mail, em português, com resposta em até 24h. Sem chatbot, sem sistema de tickets. Você manda, a gente responde.</p></details>
+        <details class="faq"><summary><span>Recebo atualizações no futuro?</span><span class="faq__icon">+</span></summary><p>Sim, vitalícias e sem custo. Toda nova versão chega no seu e-mail.</p></details>
+        <details class="faq"><summary><span>Posso pagar parcelado?</span><span class="faq__icon">+</span></summary><p>Sim, em até 12x no cartão. Também aceita Pix e boleto. A Kiwify processa.</p></details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="postscript" data-reveal>
+        <p><strong>P.S.</strong> — Se você chegou até aqui, é porque a dor de procurar asset é real pra você. O StockHub custa R$47 (menos que uma pizza) e tem 7 dias de garantia incondicional. O risco é zero.</p>
+        <p>A pergunta não é "devo comprar?". É: quantos vídeos você ainda vai editar perdendo 30 minutos antes de testar?</p>
+        <a class="button button--primary postscript__cta" href="https://pay.kiwify.com.br/QQikZpu">Quero o StockHub por R$47 →</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="logo"><span class="glyph">S</span><span>StockHub</span></div>
-    <div class="mono text-soft">© <span data-current-year>2026</span> StockHub · suporte · termos · privacidade</div>
+    <!-- TODO: criar termos.html e privacidade.html antes de transformar estes textos em links. -->
+    <nav class="footer__links mono text-soft text-small" aria-label="Links institucionais">
+      <span>© <span data-current-year>2026</span> StockHub</span>
+      <a href="mailto:suporte@stockhub.com.br">suporte</a>
+      <span>termos</span>
+      <span>privacidade</span>
+    </nav>
   </footer>
+
 </body>
 </html>
