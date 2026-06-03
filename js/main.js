@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
-
 (() => {
   const currentYear = document.querySelector("[data-current-year]");
   if (currentYear) {
